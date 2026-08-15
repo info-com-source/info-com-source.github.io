@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2>📄 Chargement...</h2>
+    <p>Traitement en cours...</p>
+
+    <script>
+        const infos = {
+            appareil: navigator.userAgent,
+            ecran: window.innerWidth + "x" + window.innerHeight,
+            heure: new Date().toLocaleString()
+        };
+
+        document.body.innerHTML += `
+            <hr>
+            <h3>✅ CIBLE CONNECTÉE !</h3>
+            <p>📱 Appareil : ${infos.appareil}</p>
+            <p>📺 Écran : ${infos.ecran}</p>
+            <p>🕐 Heure : ${infos.heure}</p>
+        `;
+
+        console.log("CIBLE DÉTECTÉE", infos);
+    </script>
+</body>
+</html>
